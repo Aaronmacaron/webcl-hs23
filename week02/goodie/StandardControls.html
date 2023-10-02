@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <title>Standard HTML Input Controls</title>
     <style>
-
+        .inputs {
+            display: grid;
+            grid-template-columns: max-content max-content;
+            column-gap: 1em;
+        }
     </style>
     <script>
         const toggleLED = el => el.setAttribute("src", el.src.match("on") ? "led_red_off.png" : "led_red_on.png");

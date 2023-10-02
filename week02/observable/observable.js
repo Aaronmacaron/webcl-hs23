@@ -36,7 +36,7 @@ const ObservableList = list => {
         del: item => {
             const removedIndex = listRemoveItem(item);
             const safeIterate = [...delListeners]; // shallow copy as we might change listeners array while iterating
-            safeIterate.forEach( (listener, index) => listener(item, () => delListenersRemove(index) ));
+            safeIterate.forEach( (listener, index) => listener(item, removedIndex, () => delListenersRemove(index) ));
         },
         removeDeleteListener: removeItem(delListeners),
         count:   ()   => list.length,

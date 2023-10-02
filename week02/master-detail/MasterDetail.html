@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Master Detail</title>
+    <link rel="stylesheet" href="MasterDetail.css">
+</head>
+<body>
+
+<h1>Master Detail</h1>
+
+<main>
+    <div class="master">
+        <h3>Master</h3>
+
+        <div>
+            <button class="add-button">Add Entry</button>
+        </div>
+
+        <table>
+            <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Workload</th>
+                <th>Delete</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+
+    <div class="detail">
+        <h3>Detail</h3>
+        <div class="inputs">
+            <label for="firstNameInput">First Name</label>
+            <input id="firstNameInput" type="text">
+
+            <label for="lastNameInput">Last Name</label>
+            <input id="lastNameInput" type="text">
+
+            <label for="workloadInput">Workload</label>
+            <input id="workloadInput" type="number">
+        </div>
+        <div>
+            <button id="save-button">Save</button>
+            <button id="reset-button">Reset</button>
+        </div>
+    </div>
+</main>
+
+<script src="MasterDetail.js" type="module"></script>
+</body>
+</html>
