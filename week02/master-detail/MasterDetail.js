@@ -86,7 +86,7 @@ const view = () => {
   };
 
   // register event listeners
-  addRowButton.addEventListener('click', () => controller.addRow());
+  addRowButton.addEventListener('click', controller.addRow);
   saveButton.addEventListener('click', controller.save);
   resetButton.addEventListener('click', controller.reset);
   for (const [name, input] of Object.entries(inputFields)) {
@@ -121,8 +121,11 @@ const view = () => {
     });
 
     entry.dirty.onChange(isDirty => {
-      if (isDirty) newRow.classList.add('dirty')
-      else newRow.classList.remove('dirty');
+      if (isDirty) {
+        newRow.classList.add('dirty');
+      } else {
+        newRow.classList.remove('dirty');
+      }
     });
 
     entry.edited.onChange(({firstName, lastName, workload}) => {
